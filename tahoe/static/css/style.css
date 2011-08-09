@@ -25,6 +25,11 @@ a {
 	color: #b51500;
 }
 
+p {
+	font-size: 14px;
+	line-height: 1.5em;
+}
+
 .clear {
 	display: clear;
 }
@@ -135,6 +140,13 @@ a {
 #main_section img {
 	margin: 40px 0;
 }
+
+
+#volunteers_imgs img {
+	float: left;
+	padding: 10px;
+}
+
 
 
 #footer_wrap {
