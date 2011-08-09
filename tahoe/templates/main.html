@@ -1,18 +1,47 @@
 {% extends 'base.html' %}
 
+{% block head %}
+
+<script type="text/javascript">
+var main_copy = "";
+$(document).ready(function (){
+	main_copy = $('#main_section_copy').html();
+	$('.main_hover').hover(function (){
+		var multiplier = parseInt($(this).children('span').attr('title'));
+		multiplier = multiplier * 300;
+		$('#main_section_image').css({'background-position': '0 ' + multiplier + 'px' });
+		$('#main_section_copy').html($(this).children('span').html());
+
+	}, function (){
+		$('#main_section_image').css({'background-position': '0 0'});
+		$('#main_section_copy').html(main_copy);
+
+	});
+	
+
+});
+
+
+</script>
+
+{% endblock %}
+
 {% block main %}
 <div id="main_section_wrap">
 	<div id="main_section" class="container_12">
 		<div class="grid_6">
 			<h1>Tahoe-LAFS</h1>
-			<div class="grid_4">
 				<div id="main_block">
-					<span>Open, distributed, and secure cloud storage system.</span>
+					<span id="main_section_copy">Open, distributed, and secure cloud storage system.</span>
 				</div>
-			</div>
 		</div>
 		<div class="grid_6">
-			<img src="{{ STATIC_URL }}img/test-main-gloss.png" />
+			<div id="main_section_image">
+				<div class="main_hover" title="Open"><span title="4">Tahoe-LAFS is a Free Software/Open Source storage technology.</span></div>
+				<div class="main_hover" title="Distributed"><span title="3">Your data is distributed across multiple servers. Even if some of the servers fail or are taken over by an attacker, the entire filesystem continues to function correctly.</span></div>
+				<div class="main_hover" title="Secure"><span title="2">Your data is encrypted and the service provider never has the ability to read or modify your data.</span></div>
+				<div class="main_hover" title="Everywhere"><span title="1">Your data is accessible from many clients, including the web browser, command line, Javascript frontends, Windows virtual drive, Tahoe backup tool, Duplicity, and (S)FTP clients.</span></div>
+			</div>
 		</div>
 	</div>
 </div>
