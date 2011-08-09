@@ -1,0 +1,133 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url('/static/img/tile-back-light-squares.jpg');
+	background-repeat: repeat;
+	font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
+	color: #333;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Black Ops One', sans-serif;
+	text-shadow: 0 1px 0 black;
+}
+
+h1 {
+	font-size: 60px;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+a {
+	color: #d62700;
+}
+
+.clear {
+	display: clear;
+}
+
+#header_wrap {
+	background-color: #111;
+	background-image: url('/static/img/tile-top-dark-squares.jpg');
+	background-repeat: repeat-x;
+	height: 100px;
+	/*border-top: 4px solid #d62700;*/
+	border-top: 4px solid #8d3131;
+
+	/*
+	-moz-box-shadow: 0px 5px 5px #bbb;
+	-webkit-box-shadow: 0px 5px 5px #bbb;
+	box-shadow: 0px 5px 5px #bbb;
+	*/
+}
+
+#logo {
+	padding: 15px 0;
+}
+
+#main_menu {
+	padding: 28px;
+}
+#menu ul {
+	float: right;
+	margin: 0;
+}
+#menu li {
+	display: inline;
+	list-style-type: none;
+	text-align: right;
+	margin-left: 20px;
+}
+#menu li a {
+	color: #f0f0f0;
+	font-size: 22px;
+	line-height: 34px;
+	font-family: 'Black Ops One', sans-serif;
+	font-weight: 100;
+	text-decoration: none;
+}
+
+#menu li a:hover {
+	color: #d62700;
+}
+
+#main_section_wrap {
+	background-image: url('/static/img/red-hex.png');
+	background-repeat: repeat;
+	height: 400px;
+
+	/*
+	-moz-box-shadow: 0px 5px 5px #bbb;
+	-webkit-box-shadow: 0px 5px 5px #bbb;
+	box-shadow: 0px 5px 5px #bbb;
+	*/
+
+	-moz-box-shadow:inset 0 0 10px #000000;
+	-webkit-box-shadow:inset 0 0 10px #000000;
+	box-shadow:inset 0 0 10px #000000;
+	
+
+}
+
+
+
+#main_block {
+	font-size: 20px;
+}
+
+
+#main_section {
+	color: #efefef;
+}
+
+#main_section h1 {
+	font-family: 'Black Ops One', sans-serif;
+	font-size: 60px;
+	text-shadow: 0 1px 0 black;
+
+}
+
+#main_section #main_block {
+	font-size: 30px;
+}
+
+#main_section img {
+	margin: 40px 0;
+}
+
+
+#footer_wrap {
+	margin-top: 40px;
+	background-color: #111;
+	background-image: url('/static/img/tile-footer-light-squares.png');
+	background-repeat: repeat-x;
+	height: 100px;
+
+	-moz-box-shadow: inset 0px 0px 5px #555;
+	-webkit-box-shadow: inset 0px 0px 5px #555;
+	box-shadow: inset 0px 0px 5px #555;
+}
+
+

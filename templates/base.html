@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Tahoe-LAFS</title>
+	<link href="/static/img/favicon.png" rel="icon" type="image/x-png" />
+	<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/static/css/960.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
+
+	{% block head %}
+	{% end %}
+</head>
+<body>
+	<div id="header_wrap">
+		<div id="header" class="container_12">
+			<div id="logo" class="grid_2">
+				<img src="/static/img/logo-new.png" />
+			</div>
+			<div id="menu" class="grid_10">
+				<div id="main_menu">
+					<ul>
+						<li><a href="">NEWS</a></li>
+						<li><a href="">DOCS</a></li>
+						<li><a href="">DEVELOP</a></li>
+						<li><a href="">DONATE</a></li>
+						<li><a href="">VOLUNTEERS</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% block main %}
+
+	{% end %}
+	<div id="main" class="container_12">
+	{% block content %}
+	{% end %}
+	</div>
+	<div id="footer_wrap">
+		<div id="footer" class="container_12">
+		</div>
+	</div>
+</body>
+</html>
