@@ -1,4 +1,7 @@
-# Django settings for tahoe project.
+# Django settings for Tahoe-LAFS website.
+import os.path
+
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -60,7 +63,7 @@ STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/static/'
+STATIC_URL = '/site_media/static/'
 
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
@@ -72,6 +75,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+	os.path.join(PROJECT_ROOT, 'static/'),
 )
 
 # List of finder classes that know how to find static files in
@@ -83,7 +87,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '3f&#2*a5lrvze5v$6%$wfi$-v%ss*&o8hyuyd(b=@n8v0_$9n@'
+SECRET_KEY = 'f^3bn03glw@uue*ae6gh+gm)a)!vh84gp)22e&-%6o1@#)wj&7'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -91,6 +95,16 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
 )
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.contrib.auth.context_processors.auth',
+    'django.contrib.messages.context_processors.messages',
+)
+
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -102,11 +116,9 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'tahoe.urls'
 
-TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-)
+TEMPLATE_DIRS = [
+    os.path.join(PROJECT_ROOT, "templates"),
+]
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -115,6 +127,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+	'home'
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -143,3 +156,9 @@ LOGGING = {
         },
     }
 }
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
+
