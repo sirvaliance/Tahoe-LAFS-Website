@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-image: url('/static_media/static/img/tile-back-light-squares.jpg');
+	background-image: url('/site_media/static/img/tile-back-light-squares.jpg');
 	background-repeat: repeat;
 	font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
 	color: #333;
@@ -32,7 +32,7 @@ a {
 #header_wrap {
 	background-color: #111;
 	/*
-	background-image: url('/static_media/static/img/tile-top-dark-squares.jpg');
+	background-image: url('/site_media/static/img/tile-top-dark-squares.jpg');
 	background-repeat: repeat-x;
 	*/
 	height: 80px;
@@ -77,7 +77,7 @@ a {
 }
 
 #main_section_wrap {
-	background-image: url('/static_media/static/img/tile-main-dark-squares.jpg');
+	background-image: url('/site_media/static/img/tile-main-dark-squares.jpg');
 	background-repeat: repeat;
 	height: 400px;
 
@@ -125,7 +125,7 @@ a {
 #footer_wrap {
 	margin-top: 40px;
 	background-color: #111;
-	background-image: url('/static_media/static/img/tile-footer-light-squares.png');
+	background-image: url('/site_media/static/img/tile-footer-light-squares.png');
 	background-repeat: repeat-x;
 	height: 100px;
 
