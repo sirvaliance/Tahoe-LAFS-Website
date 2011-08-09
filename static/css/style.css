@@ -10,6 +10,7 @@ body {
 h1, h2, h3, h4, h5 {
 	font-family: 'Black Ops One', sans-serif;
 	text-shadow: 0 1px 0 black;
+	color: #222;
 }
 
 h1 {
@@ -30,11 +31,13 @@ a {
 
 #header_wrap {
 	background-color: #111;
+	/*
 	background-image: url('/static/img/tile-top-dark-squares.jpg');
 	background-repeat: repeat-x;
-	height: 100px;
-	/*border-top: 4px solid #d62700;*/
-	border-top: 4px solid #8d3131;
+	*/
+	height: 80px;
+	border-bottom: 2px solid #444;
+	/*border-top: 4px solid #8d3131;*/
 
 	/*
 	-moz-box-shadow: 0px 5px 5px #bbb;
@@ -62,32 +65,32 @@ a {
 }
 #menu li a {
 	color: #f0f0f0;
-	font-size: 22px;
-	line-height: 34px;
+	font-size: 18px;
+	line-height: 28px;
 	font-family: 'Black Ops One', sans-serif;
 	font-weight: 100;
 	text-decoration: none;
 }
 
 #menu li a:hover {
-	color: #d62700;
+	color: #b51500;
 }
 
 #main_section_wrap {
-	background-image: url('/static/img/red-hex.png');
+	background-image: url('/static/img/tile-main-dark-squares.jpg');
 	background-repeat: repeat;
 	height: 400px;
 
-	/*
 	-moz-box-shadow: 0px 5px 5px #bbb;
 	-webkit-box-shadow: 0px 5px 5px #bbb;
 	box-shadow: 0px 5px 5px #bbb;
-	*/
 
+	/*
 	-moz-box-shadow:inset 0 0 10px #000000;
 	-webkit-box-shadow:inset 0 0 10px #000000;
 	box-shadow:inset 0 0 10px #000000;
 	
+	*/
 
 }
 
@@ -105,6 +108,7 @@ a {
 #main_section h1 {
 	font-family: 'Black Ops One', sans-serif;
 	font-size: 60px;
+	color: #efefef;
 	text-shadow: 0 1px 0 black;
 
 }
