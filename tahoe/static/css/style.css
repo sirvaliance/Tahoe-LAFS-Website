@@ -101,11 +101,6 @@ p {
 
 
 
-#main_block {
-	font-size: 20px;
-}
-
-
 #main_section {
 	color: #efefef;
 }
@@ -118,9 +113,7 @@ p {
 
 }
 
-#main_section #main_block {
-	font-size: 30px;
-}
+
 #main_section_image {
 	margin: 40px 0;
 	display: block;
@@ -141,6 +134,14 @@ p {
 	margin: 40px 0;
 }
 
+.smaller {
+	font-size: 20px;
+	line-height: 1.5em;
+
+}
+.larger {
+	font-size: 30px;
+}
 
 #volunteers_imgs img {
 	float: left;
@@ -161,4 +162,10 @@ p {
 	box-shadow: inset 0px 0px 5px #555;
 }
 
-
+tr {
+	padding: 20px;
+	margin: 20px;
+}
+td {
+	padding: 10px 20px 10px 0;
+}

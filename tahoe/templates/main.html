@@ -11,10 +11,18 @@ $(document).ready(function (){
 		multiplier = multiplier * 300;
 		$('#main_section_image').css({'background-position': '0 ' + multiplier + 'px' });
 		$('#main_section_copy').html($(this).children('span').html());
+		$('#main_section_copy').removeClass('larger');
+		$('#main_section_copy').addClass('smaller');
+
+
 
 	}, function (){
 		$('#main_section_image').css({'background-position': '0 0'});
 		$('#main_section_copy').html(main_copy);
+		$('#main_section_copy').removeClass('smaller');
+		$('#main_section_copy').addClass('larger');
+
+
 
 	});
 	
@@ -32,7 +40,7 @@ $(document).ready(function (){
 		<div class="grid_6">
 			<h1>Tahoe-LAFS</h1>
 				<div id="main_block">
-					<span id="main_section_copy">Open, distributed, and secure cloud storage system.</span>
+					<span id="main_section_copy" class="larger">Open, distributed, and secure cloud storage system.</span>
 				</div>
 		</div>
 		<div class="grid_6">
@@ -62,7 +70,7 @@ $(document).ready(function (){
 
 
 </div>
-<div class="grid_6">
+<div class="grid_5 prefix_1">
 	<h2>Volunteers</h2>
 	<div id="volunteers_imgs">
 		<img src="{{ STATIC_URL }}img/photos/zooko.png" />
@@ -85,7 +93,7 @@ $(document).ready(function (){
 	<p> Go to <a href="http://tahoe-lafs.org/trac/tahoe-lafs/wiki/Dev">the Dev page</a> to <i>get source code</i>, and start hacking on Tahoe-LAFS.</p> 
 
 </div>
-<div class="grid_6">
+<div class="grid_5 prefix_1">
 	<h2>Read The Docs</h2>
 	<p><a href="http://tahoe-lafs.org/trac/tahoe-lafs/wiki/Doc">The Doc page</a></p>
 	<p><a href="http://tahoe-lafs.org/~zooko/lafs.pdf">Tahoe – The Least-Authority File System</a> (<em>the</em> introduction to Tahoe-LAFS for discriminating hackers)</p>
@@ -100,25 +108,28 @@ $(document).ready(function (){
 	<p><a href="http://tahoe-lafs.org/trac/tahoe-lafs/wiki/TahoeLAFSWeeklyNews">The Tahoe-LAFS Weekly News</a> is the community newsletter.</p>
  
 </div>
-<div class="grid_6">
+<div class="grid_5 prefix_1">
 	<h2>Donate</h2>
 	<p>You can donate to the Tahoe-LAFS project:</p>
 	<table> 
 	  <tr> 
-		<td> </td> 
-		<td>Bitcoin:</td><td> <a href="http://tahoe-lafs.org/trac/tahoe-lafs/wiki/BitCoinPage"><img src="http://tahoe-lafs.org/~zooko/bitcoin.png" /></a></td> 
-		<td width="25"> </td> 
-		<td>Flattr: </td><td><a href="http://flattr.com/thing/48658/Tahoe-LAFS-Open-source-secure-storage-software" target="_blank"> 
-	<img src="http://api.flattr.com/button/button-static-50x60.png" alt="Flattr this" title="Flattr this" border="0" /></a></td> 
-		<td width="25"> </td> 
-	<td>PayPal:</td><td> 
-	  <form action="https://www.paypal.com/cgi-bin/webscr" method="post"> 
-		<input type="hidden" name="cmd" value="_s-xclick" /> 
-		<input type="hidden" name="hosted_button_id" value="EBYATPQDCRDJ6" /> 
-		<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" /> 
-		<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" /> 
+		<td>Bitcoin:</td>
+		<td> <a href="http://tahoe-lafs.org/trac/tahoe-lafs/wiki/BitCoinPage"><img src="http://tahoe-lafs.org/~zooko/bitcoin.png" /></a></td> 
+	  <tr>
+		  <td>Flattr: </td>
+		  <td><a href="http://flattr.com/thing/48658/Tahoe-LAFS-Open-source-secure-storage-software" target="_blank"> 
+				<img src="http://api.flattr.com/button/button-static-50x60.png" alt="Flattr this" title="Flattr this" border="0" /></a></td> 
+	  </tr>
+	  <tr>
+		  <td>PayPal:</td>
+		  <td><form action="https://www.paypal.com/cgi-bin/webscr" method="post"> 
+			<input type="hidden" name="cmd" value="_s-xclick" /> 
+			<input type="hidden" name="hosted_button_id" value="EBYATPQDCRDJ6" /> 
+			<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" /> 
+			<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" /> 
 	  </form> 
-	</td></tr> 
+		</td>
+		</tr> 
 	</table> 
 
 </div>
